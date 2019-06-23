@@ -1,0 +1,48 @@
+.container {
+  margin: 0 10% 0px 10%;
+  text-align: center;
+  font-family: Roboto;
+}
+.container .container__title {
+  font-weight: 400;
+  font-variant-ligatures: no-contextual;
+  font-size: 18px;
+}
+.container .container--division {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 3px;
+}
+
+.files {
+  width: 100%;
+  min-height: 400px;
+  background: #f5f5f5;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 0 0 10px 10px;
+}
+.files .files__image {
+  opacity: 0.4;
+  margin-top: 7.5%;
+}
+.files .files__title {
+  color: #909090;
+}
+.files .files__list {
+  text-align: center;
+  margin: 2% 0px 0px 26%;
+  padding: 10px 0px 10px 20px;
+}
+.files .files__list__item {
+  list-style: none;
+}
+.files .files--background {
+  width: 494px;
+  background: white;
+}
+
+.files--hover {
+  border: 2px solid blue;
+  background: #0000002e;
+}
+
+/*# sourceMappingURL=fileUpload.css.map */
