@@ -28,15 +28,15 @@
   color: #909090;
 }
 .files .files__list {
-  text-align: center;
-  margin: 2% 0px 0px 26%;
-  padding: 10px 0px 10px 20px;
+  text-align: justify;
+  margin: 2% 0px 0px 12%;
+  padding: 10px 9px 10px 20px;
 }
 .files .files__list__item {
   list-style: none;
 }
 .files .files--background {
-  width: 494px;
+  width: 74%;
   background: white;
 }
 

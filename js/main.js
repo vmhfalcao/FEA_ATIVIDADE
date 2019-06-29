@@ -1,11 +1,11 @@
-function dodrop(event) {
+ dodrop = (event) => {
     var dt = event.dataTransfer;
     var files = dt.files;
-    var count = files.length;
+    let count = files.length;
     p = 0
     var progressBar = document.getElementById("bar");
 
-    qtdfiles = "Numero de Arquivos: " + count + "\n";
+    qtdfiles = `Numero de Arquivos: ${count} \n`;
     document.getElementById("qtdfiles").textContent += qtdfiles;
 
     if(files.length > 0){
@@ -13,7 +13,7 @@ function dodrop(event) {
         var ul = document.getElementById("listfiles");
         ul.classList.add("files--background");
         for (var i = 0; i < files.length; i++) {
-            var value = "<b> Arquivo " + (i + 1)  + ": </b>" + files[i].name + " - Tamanho do Arquivo: " + files[i].size;
+            var value = `<b> Arquivo ${(i + 1)}: </b> ${files[i].name} Tamanho do Arquivo: <b>${calculo(files[i].size / 1000)}</b>`;
             var list = document.getElementById("listfiles");
             var li = document.createElement("li");
             li.classList.add("files__list__item") 
@@ -24,27 +24,40 @@ function dodrop(event) {
     }
 }
 
+calculo = (valor) => {
+    console.log(valor);
 
-function enter() {
+    if (valor <= 0.999)
+    return valor = `${valor} Bytes`
+    else if (valor >= 1 & valor < 1000)
+    return valor = `${valor} KB`
+    else if ( valor >=1000 & valor < 1000000)
+    return valor = `${valor} MB`
+    else (valor >= 1000000)
+    return valor = `${valor} GB`;
+}
+
+
+enter =  () => {
     document.getElementById('listfiles').textContent = '';
     document.getElementById('qtdfiles').textContent = '';
     event.stopPropagation();
     event.preventDefault();
-}
+};
 
-function over(event) {
+over = (event) => {
     document.getElementById("box_file").classList.add("files--hover");
     event.stopPropagation();
     event.preventDefault();
 }
 
-function leaveOver(event){
+leaveOver = (event) => {
     document.getElementById("box_file").classList.remove("files--hover");
     event.stopPropagation();
     event.preventDefault();
 }
 
-function drop(event) {
+drop = (event) => {
     event.stopPropagation();
     event.preventDefault();
     dodrop(event);
