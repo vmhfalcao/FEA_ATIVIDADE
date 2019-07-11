@@ -6,20 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Upload de Arquivos</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="manifest" href="./site.webmanifest">
-        <link rel="apple-touch-icon" href="./icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="./css/normalize.css">
-        <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/fileUpload.css">
-        <script src="js/vendor/jquery-3.4.1.min.js"></script>
-        
     </head>
     <body>
         <section class="container">
             <h3 class="container__title">Upload de Arquivos</h3>
             <div class="container--division"></div>
-            <div class="files" id="box_file" ondragleave="leaveOver(event)" ondrop="drop(event)" ondragover="over(event)" ondragenter="enter()">
+            <div class="files" id="box_file">
                 <img class="files__image" src="img/open-file.png" alt="image upload">
                 <div class="files__title">
                     <span>Solte os Arquivos aqui</span>
@@ -32,6 +24,5 @@
                 </ul>
             </div>
         </section>
-        <script src="./js/main.js"></script>
     </body>
 </html>
